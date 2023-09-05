@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+    {% block body_block %}
+        <h1>Register Here!</h1>
+        <div class="jumbotron">
+            <h2>Fill out the form:</h2>
+            <form class="" action="" method="post">
+                {{user_form.as_p }}
+                {{ profile_form.as_p }}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" name="" value="Register" >
+            </form>            
+        </div>
+    {% endblock %}  
+    </body>
+</html>  
