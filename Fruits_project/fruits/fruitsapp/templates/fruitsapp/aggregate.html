@@ -1,0 +1,21 @@
+{% extends "fruitsapp/base.html" %}
+{% block content %}
+{% load static %}
+<div class="row row-cols-3">
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>pineapple</h3></div>
+        <div class="p-2"><img src="{% static 'images/pineapple.jpg' %}" alt="an image of a pineapple" /></div>
+        <div class="mt-auto p-2"><button onclick="pineapple()">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>pumpkin</h3></div>
+        <div class="p-2"><img src="{% static 'images/pumpkin.jpg' %}" alt="an image of a pumpkin" /></div>
+        <div class="mt-auto p-2"><button onclick="pumpkin()">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>strawberries</h3></div>
+        <div class="p-2"><img src="{% static 'images/strawberries.jpg' %}" alt="image of strawberries" /></div>
+        <div class="mt-auto p-2"><button onclick="strawberries()">show cat</button></div>
+    </div>
+</div>
+{% endblock %}

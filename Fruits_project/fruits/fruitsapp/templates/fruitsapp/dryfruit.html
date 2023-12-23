@@ -1,0 +1,26 @@
+{% extends "fruitsapp/base.html" %}
+{% block content %}
+{% load static %}
+<div class="row row-cols-3">
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>grains</h3></div>
+        <div class="p-2"><img src="{% static 'images/grains.jpg' %}" alt="an image of grains" height="265px" width="190px"/></div>
+        <div class="mt-auto p-2"><button onclick="grains()">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>nuts</h3></div>
+        <div class="p-2"><img src="{% static 'images/nuts.jpg' %}" alt="an image of a nut" height="265px" width="190px"/></div>
+        <div class="mt-auto p-2"><button onclick="nuts()">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>dry beans</h3></div>
+        <div class="p-2"><img src="{% static 'images/drybeans.jpg' %}" alt="an image of dry beans" height="265px" width="190px" /></div>
+        <div class="mt-auto p-2"><button onclick="drybeans()">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>coconut</h3></div>
+        <div class="p-2"><img src="{% static 'images/coconut.jpg' %}" alt="image of a coconut" /></div>
+        <div class="mt-auto p-2"><button onclick="coconut()">show cat</button></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'fruitsapp/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<body>
+
+    <div class="container bg-light shadow-md p-5 form-layout">
+        <h3> Update fruits</h3>
+
+        <h6> Update your fruits down below.</h6>
+
+        <hr>
+        <br>
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{ form.image|as_crispy_field }}
+            <br>
+            {{ form.name|as_crispy_field }}
+            <br>
+            {{ form.category|as_crispy_field }}
+
+            <br>
+            {{ form.description|as_crispy_field }}
+
+            <br>
+            <button type="submit" class="btn btn-info">
+
+                Update Fruits &nbsp; <i class="fa fa-plus" aria-hidden="true"></i>
+            
+            </button>
+
+            &nbsp;
+
+            <a href="{% url 'view_fruits' %}" class="btn btn-secondary">Return &nbsp; <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+
+        </form>
+    </div>
+    <br>
+</body>
+
+{% endblock %}

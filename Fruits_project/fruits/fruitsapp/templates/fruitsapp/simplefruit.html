@@ -1,0 +1,41 @@
+{% extends "fruitsapp/base.html" %}
+{% block content %}
+{% load static %}
+<div class="row row-cols-3">
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>peaches</h3></div>
+        <div class="p-2"><img src="{% static 'images/peaches.jpg' %}" alt="an image of peaches" /></div>
+        <div class="mt-auto p-2"><button onclick="peaches()">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>apple</h3></div>
+        <div class="p-2"><img src="{% static 'images/apple.jpg' %}" alt="an image of an apple" height="265px" width="190px"/></div>
+        <div class="mt-auto p-2"><button onclick="apple(e)" onmouseout="reset(e)">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>cheeries</h3></div>
+        <div class="p-2"><img src="{% static 'images/cheerie.jpg' %}" alt="an image of cheeries" height="265px" width="190px"/></div>
+        <div class="mt-auto p-2"><button onclick="cheeries()">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>pear</h3></div>
+        <div class="p-2"><img src="{% static 'images/pear.jpg' %}" alt="an image of a pear" /></div>
+        <div class="mt-auto p-2"><button onclick="pear()">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>pumpkin</h3></div>
+        <div class="p-2"><img src="{% static 'images/pumpkin.jpg' %}" alt="an image of a pumpkin" /></div>
+        <div class="mt-auto p-2"><button onclick="pumpkin()">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>watermelon</h3></div>
+        <div class="p-2"><img src="{% static 'images/watermelon.jpg' %}" alt="image of watermelon" /></div>
+        <div class="mt-auto p-2"><button onclick="watermelon()">show cat</button></div>
+    </div>
+    <div class="col d-flex flex-column mb-3">
+        <div class="p-2"><h3>pawpaw</h3></div>
+        <div class="p-2"><img src="{% static 'images/pawpaw.jpg' %}" alt="image of a pawpaw" /></div>
+        <div class="mt-auto p-2"><button onclick="pawpaw()">show cat</button></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'fruitsapp/base.html' %}
+
+{% block content %}
+    <body>   
+
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{ fruit.image.url }}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><p> <strong> Name: </strong> &nbsp; {{ fruit.name }} </p></h5>
+                  <p> <strong> ID: </strong> &nbsp; {{ fruit.id }} </p>
+
+                  <p> <strong> Category: </strong> &nbsp; {{ fruit.category }} </p>
+
+                  <p> <strong> Description: </strong> &nbsp; {{ fruit.description }} </p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <br>
+        <a href="{% url 'go_back' %}" class="btn btn-secondary">Back</a>
+        <a href="{% url 'update_fruit' fruit.id %}" class="btn btn-secondary">Update Fruits</a>
+
+    </body>
+{% endblock %}

@@ -1,0 +1,38 @@
+
+{% extends 'fruitsapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>The fruits images...</h1>
+    <p>
+    <a href="{% url 'add_fruit' %}" class="btn btn-secondary">Add fruits</a><br>
+    </p>
+    <table class="table table-hover table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">View</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                {% for p in show_fruit %}
+                <tr>
+                    {% if p.image %}
+                        <td><img src="{{ p.image.url }}" alt="an image of an apple" height="60px" width="50px"/></td>
+                    {% else %}
+                        <td><img src="{% static 'images/apple.jpg' %}" alt="an image of an apple" height="60px" width="50px"/></td>
+                    {% endif %}
+                    <td>{{ p.name }}</td>
+                    
+                    <td> <a class="btn btn-success btn-sm" href="{% url 'single_fruit' p.id %}"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+                </tr>
+                {% endfor %}
+            
+
+        </tbody>
+        
+    </table>
+
+{% endblock %}

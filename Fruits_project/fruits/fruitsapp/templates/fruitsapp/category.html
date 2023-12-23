@@ -1,0 +1,33 @@
+{% extends "fruitsapp/base.html" %}
+{% block content %}
+    <body>
+        
+        <div class="container text-center">
+            <h1>CATEGORIES</h1>
+            <hr>
+            <br>
+
+            <div class="row row-cols-3">
+                <div class="col">
+                    <h2><a href="{% url 'simplefruit' %}">Simple Fruits</a></h2>
+                "  <p>These develop from a single ovary of a single flower. Examples include apples, cherries, and peaches.</p>
+                </div>
+                <div class="col">
+                    <h2><a href="{% url 'aggregate' %}">Aggregate Fruits</a></h2>
+                    <p>These form from multiple ovaries of a single flower. Each ovary becomes a small individual unit within the larger fruit. Examples include strawberries and raspberries.</p>
+                </div>
+                <div class="col">
+                    <h2><a href="{% url 'multiple' %}">Multiple Fruits</a></h2>
+                    <p>These are formed from the ovaries of multiple flowers that are closely packed together. As the individual flowers develop, they merge to create a single fruit. An example is the pineapple.</p>
+                </div>
+                <div class="col">
+                    <h2><a href="{% url 'dryfruit' %}">Dry Fruits</a></h2>
+                    <p>These fruits have a hard, dry outer shell that protects the seeds inside. Examples include nuts, beans, and grains.</p>
+                </div>
+                <div class="col">
+                    <h2><a href="{% url 'fleshyfruit' %}">Fleshy Fruits</a></h2>
+                    <p>These fruits have a soft and fleshy outer layer. They can be further divided into categories like drupes (e.g., peaches), berries (e.g., tomatoes), and pomes (e.g., apples).</p>
+                </div>
+            </div>
+    </body>
+{% endblock %}

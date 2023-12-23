@@ -1,0 +1,19 @@
+{% extends "fruitsapp/base.html" %}
+{% block content %}
+    <body>
+
+        <div class="container">
+            <h1 class="text-center">FRUITS</h1>
+            <hr>
+            <br>
+        
+            <p> A fruit is the mature ovary of a flowering plant, usually containing seeds.It develops from the fertilized ovary of a flower after pollination occurs. 
+                Fruits are an essential part of angiosperms (flowering plants) and play a crucial role in the reproduction and dispersal of plant species.
+                In everyday language, "fruit" is often used to refer to sweet and edible plant products that are typically consumed as part of a meal or snack.
+                However, in botanical terms, fruits can include a wide range of structures beyond what is commonly considered as "fruits" in culinary contexts.
+                Fruits come in various shapes, sizes, and types, and they are classified based on different criteria. Some common types of fruits include: <a href="{% url 'category' %}">click to show categories</a>
+            </p>
+        </div>
+        
+    </body>
+{% endblock %}
